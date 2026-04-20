@@ -6,6 +6,12 @@ class PrinterI(Demo.Printer):
         print(s)
         return s + "*"
 
+    def soma(self, a, b, current=None):
+        return a + b
+
+    def countChars(self, s, current=None):
+        return len(s)
+
 communicator = Ice.initialize(sys.argv) 
 
 adapter = communicator.createObjectAdapterWithEndpoints("SimpleAdapter", "default -p 11000")

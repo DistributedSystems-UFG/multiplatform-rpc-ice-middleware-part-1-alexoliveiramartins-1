@@ -8,4 +8,6 @@ printer = Demo.PrinterPrx.checkedCast(base)
 if not printer:
     raise RuntimeError("Invalid proxy")
 
-printer.printString("Hello World!")
+print(printer.printString("Hello World!"))
+print("Soma:", printer.soma(2, 3))
+print("Quantidade de caracteres:", printer.countChars("Hello World!"))

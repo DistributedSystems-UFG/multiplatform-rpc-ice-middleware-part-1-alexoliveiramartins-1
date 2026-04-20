@@ -9,6 +9,14 @@ class PrinterI(Demo.Printer):
         print(self.t, s)
         return s + "*"
 
+    def soma(self, a, b, current=None):
+        print(self.t, f"soma({a}, {b})")
+        return a + b
+
+    def countChars(self, s, current=None):
+        print(self.t, f"countChars({s})")
+        return len(s)
+
 communicator = Ice.initialize(sys.argv) 
 
 adapter = communicator.createObjectAdapterWithEndpoints("SimpleAdapter", "default -p 11000")
